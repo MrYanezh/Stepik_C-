@@ -1,0 +1,38 @@
+# Компилированные объектные файлы
+*.o
+*.obj
+*.in
+*.out
+
+# Исполняемые файлы
+*.exe
+*.out
+*.app
+
+# Библиотеки
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+
+# Файлы сборки (CMake, Make)
+build/
+CMakeFiles/
+*.cmake
+Makefile
+CMakeCache.txt
+
+# Отладочная информация
+*.dSYM/
+*.pdb
+
+# Резервные копии
+*~
+*.bak
+
+# IDE файлы
+.vscode/
+.idea/
+*.swp
+*.swo
