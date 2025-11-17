@@ -27,7 +27,8 @@ int main() {
     dec = (data / 10) % 10;
     sotni = (data / 100) % 10;
     tisyachi = data / 1000;
-    cout << edinic << " " << dec << " " << sotni << " " << tisyachi << endl;
+    // cout << edinic << " " << dec << " " << sotni << " " << tisyachi << endl;
+    output = (edinic - tisyachi)* (tisyachi - edinic) + (dec - sotni) * (sotni - dec) + 1;
     cout << output << endl;
     system("pause");
     return 0;
