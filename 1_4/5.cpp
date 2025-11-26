@@ -17,14 +17,16 @@ int main() {
     int b = 0;
     int c = 0;
     cin >> a >> b >> c;
+    int output = 0;
     if (a <= b) {
-        a = b;
-    }
-    if (c >= b) {
-        cout << c << endl;
+        output = b;
     } else {
-        cout << b << endl;
+        output = a;
     }
+    if (output <= c) {
+        output = c;
+    }
+    cout << output << endl;
     system("pause");
     return 0;
 }
