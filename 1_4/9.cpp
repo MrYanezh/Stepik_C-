@@ -11,6 +11,7 @@
 // Программа должна вывести YES, если из первой клетки ходом
 // короля можно попасть во вторую или NO в противном случае.
 
+#include <cstdlib>
 #include <iostream>
 using namespace std;
 int main() {
@@ -20,8 +21,7 @@ int main() {
     int row_2 = 0;
     cin >> column_1 >> row_1 >> column_2 >> row_2;
     string output = "";
-    if ((column_2 == column_1 + 1) || (column_2 == column_1 - 1) ||
-        (row_2 == row_1 + 1) || (row_2 == row_1 - 1)) {
+    if ((abs(column_2 - column_1) < 2) && (abs(row_2 - row_1) < 2)) {
         output = "YES";
     } else {
         output = "NO";
