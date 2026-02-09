@@ -28,7 +28,6 @@ int main() {
         cin >> n;
         n3 = n;
         if (n2 > n1 && n2 > n3 && n3 != 0 && i != 0) {
-            cout << "Find max" << endl;
             if (((i - max_i) < dist) && (i - max_i) != 0 && (i - max_i) != 1) {
                 dist = i - max_i;
             }
@@ -40,8 +39,6 @@ int main() {
              << dist << endl;
         n1 = n2;
         n2 = n3;
-
-        // cout << n1 << n2 << n3 << endl;
     }
     if (dist == 2147483647) {
         dist = 0;
