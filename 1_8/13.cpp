@@ -13,10 +13,15 @@ int main() {
     int m = 0;
     int array[100][100];
     cin >> n >> m;
-    int out = 0;
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
-            // TODO
+    int out = 1;
+    for (int d = 0; d < n + m - 1; d++) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (d == i + j) {
+                    array[i][j] = out;
+                    out++;
+                }
+            }
         }
     }
     // Вывод
