@@ -15,11 +15,35 @@ int main() {
     int array[100][100];
     cin >> n >> m;
     int out = 1;
+    int left = 0;
+    int right = m - 1;
+    int up = 0;
+    int down = n - 1;
 
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
-            array[i][j] = out;
+    while (left <= right && up <= down) {
+        for (int j = left; j <= right; j++) {
+            array[up][j] = out;
             out++;
+        }
+        up++;
+        for (int i = up; i <= down; i++) {
+            array[i][right] = out;
+            out++;
+        }
+        right--;
+        if (up <= down) {
+            for (int j = right; j >= left; j--) {
+                array[down][j] = out;
+                out++;
+            }
+            down--;
+        }
+        if (left <= right) {
+            for (int i = down; i >= up; i--) {
+                array[i][left] = out;
+                out++;
+            }
+            left++;
         }
     }
 
